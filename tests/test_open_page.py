@@ -1,4 +1,4 @@
-from utils.utils import find_and_click, verify_page_opened, move_mouse_to_window_bottom_center
+from action.utils import find_and_click, verify_page_opened, move_mouse_to_window_bottom_center
 import time
 
 def test_tech_tree():
@@ -31,18 +31,18 @@ def test_person_page():
 
 def test_weather_page():
     """
-    위인 페이지가 정상적으로 열리는지 테스트
+    세계 기후 페이지가 정상적으로 열리는지 테스트
     """
     time.sleep(3)  # 준비 시간
-    assert find_and_click("templates/weather_button.png"), "위인 버튼을 찾지 못했습니다."
+    assert find_and_click("templates/weather_button.png"), "세계 기후 버튼을 찾지 못했습니다."
     move_mouse_to_window_bottom_center() # 툴팁이 화면을 가려서 마우스 강제이동
-    assert verify_page_opened("templates/weather_page.png"), "위인 페이지가 열리지 않았습니다."
+    assert verify_page_opened("templates/weather_page.png"), "세계 기후 페이지가 열리지 않았습니다."
 
 def test_viceroy_page():
     """
-    위인 페이지가 정상적으로 열리는지 테스트
+    총독 페이지가 정상적으로 열리는지 테스트
     """
     time.sleep(3)  # 준비 시간
     assert find_and_click("templates/viceroy_button.png"), "총독 버튼을 찾지 못했습니다."
-    #move_mouse_to_window_bottom_center() # 툴팁이 화면을 가려서 마우스 강제이동
+    #move_mouse_to_window_bottom_center() # 툴팁이 화면을 가려서 마우스 강제이동, fail 유도를 위해 주석 처리
     assert verify_page_opened("templates/viceroy_page.png"), "총독 페이지가 열리지 않았습니다."
