@@ -40,5 +40,5 @@
 - pytest의 fixture기능을 사용하여 모든 테스트 함수의 전처리 수행​
 
 테스트 후처리​
--pytest의 hookimpl을 사용하여 테스트 실패(faill) 시, 실패 상황의 스크린샷 저장
+- pytest의 hookimpl을 사용하여 테스트 실패(faill) 시, 실패 상황의 스크린샷 저장
 
